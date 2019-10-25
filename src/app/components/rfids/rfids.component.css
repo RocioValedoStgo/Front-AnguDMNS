@@ -1,0 +1,71 @@
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+    margin-right: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*                       TABLA                              */
+
+#contenedor-formulario-flex {
+    justify-content: center;
+    max-width: 1580px;
+    width: 100%;
+}
+
+h3 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: normal;
+    color: rgb(67, 161, 182);
+    margin: 1%;
+}
+
+.tablitaA {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100%;
+    border: 2px solid black;
+    color: rgb(68, 68, 68);
+    text-align: center;
+    border-collapse: collapse;
+    overflow-y: auto;
+}
+
+.tablitaA tr td  {
+    border: 1px solid black;
+    padding: 4px;
+}
+
+.tablitaA tr:hover {
+    background: rgba(158, 157, 157, 0.336);
+}
+
+.tablitaA th {
+    padding: 8px;
+    background: rgb(89, 203, 223);
+}
+
+button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.tabla {
+    width: 90%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}

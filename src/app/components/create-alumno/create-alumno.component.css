@@ -1,0 +1,74 @@
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+    margin-right: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*                       FORMULARIO                              */
+#contenedor-formulario-flex {
+    justify-content: center;
+    max-width: 1580px;
+    width: 100%;
+}
+
+
+h3 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: normal;
+    color: rgb(26, 180, 180);
+    margin: 1%;
+}
+
+#formulario-alumno form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+
+input[type="text"], input[type="email"]{
+    width: 55%;
+    margin-bottom: 15px;
+    padding: 7px 0;
+    border: 0;
+    border-bottom: 1px solid #000000;
+    font-size: 17px;
+    outline: none;
+    background: none;
+}
+
+input::placeholder {
+    color: rgba(23, 55, 151, 0.9);
+}
+
+#formulario-alumno form button {
+    padding: 13px;
+    width: 55%;
+    display: flex;
+    outline: none;
+    background: rgb(12, 25, 100);
+    border: none;
+    color:white; 
+    text-align: center;
+    justify-content: space-around;
+    font-size: 17px;
+    border-radius: 6px;
+}
+#formulario-alumno form button:hover {
+    background: rgb(42, 153, 204);
+}
+

@@ -1,0 +1,77 @@
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+    margin-right: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1280px;
+    width: 90%;
+    margin: auto;
+}
+
+/*                       AÑADIR A FORMULARIOS                              */
+#contenedor-formulario-flex {
+    justify-content: center;
+    max-width: 1580px;
+    width: 100%;
+}
+
+.contenedor-formularios {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.formularioColor {
+    width: 26%;
+    padding: 34px 30px 38px 30px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.container-forms .color1 {
+    background-image: linear-gradient(to top, #61eee7, #3732be);
+    box-shadow: 0 12px 30px 0 rgba(37, 40, 112, 0.37);
+}
+
+.formularioColor h4 {
+    font-size: 30px;
+    margin: 0;
+    color: rgb(88, 9, 25);
+    text-align: center;
+}
+
+.imagen {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+button {
+    outline: none;
+    background: rgb(55, 20, 136);
+    border: none;
+    padding: 10px 25px;
+    color: white;
+    text-align: center;
+    margin-top: 10%;
+    border-radius: 6px;
+}
+
+button:hover {
+    background: rgb(45, 16, 112);
+}
