@@ -1,38 +1,25 @@
-<div>
-    <header>
-        <div class="menu">
-            <div class="contenedor">
-                <p class="logo"> CRUD A/S </p>
-                <nav>
-                    <ul>
-                        <li><a routerLink="/"> Inicio </a></li>
-                        <li><a routerLink="/alumnos"> Ver Alumnos </a></li>
-                        <li><a routerLink="/asistencia"> Ver Asistencia </a></li>
-                        <li><a routerLink="/rfids"> Ver RFIDS </a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
+<div class="fondo">
     <main>
         <section id="formulario-asignatura">
-            <div class="contenedor" id="contenedor-formulario-flex"> 
+            <div class="contenedor" id="contenedor-formulario-flex">
                 <h3>RFID</h3>
                 <div class="tabla">
                     <table class="tablitaA">
                         <tr>
                             <th>Numero de Serie</th>
-                            <th>Opciones</th>
+                            <th><a routerLink="/createRfid"> + Crear RFID</a> </th>
                         </tr>
                         <tr>
                             <td>allll</td>
-                            <td>ferewrfew</td>
+                            <td>
+                                <button type="button" class="edit"></button>&nbsp;
+                                <button class="delete"></button>&nbsp;
+                                <button routerLink="/asignar-RFID" class="asignar"></button>
+                            </td>
                         </tr>
                     </table>
                 </div>
             </div>
         </section>
     </main>
-
 </div>

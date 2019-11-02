@@ -1,19 +1,14 @@
-header .contenedor {
-    display: flex;
-    justify-content: space-between;
-}
-
-header ul {
-    display: flex;
-}
-
-header ul li {
-    list-style: none;
-    margin-right: 15px;
+.fondo{
+    background: linear-gradient(rgba(183, 236, 231, 0.9),rgba(190, 189, 189, 0.9)), url(../../../assets/images/fondo2.jpg);
+    width: 100%;
+    height: 93vh;
+    margin: 0;
+    background-size: cover;
 }
 
 a {
     text-decoration: none;
+    color: rgb(68, 68, 68);
 }
 
 /*                       TABLA                              */
@@ -29,7 +24,8 @@ h3 {
     font-size: 50px;
     font-weight: normal;
     color: rgb(18, 88, 65);
-    margin: 1%;
+    margin: 0;
+    margin-bottom: 2%;
 }
 
 .tablitaA {
@@ -47,7 +43,7 @@ h3 {
     padding: 4px;
 }
 
-.tablitaA tr:hover {
+.tablitaA tr:hover {    
     background: rgba(158, 157, 157, 0.336);
 }
 
@@ -67,4 +63,25 @@ button {
     justify-content: center;
     flex-wrap: wrap;
     margin: auto;
+}
+
+.delete {
+    background-image: url(../../../assets/images/delete.png);
+    background-position: center;
+    height: 24px;
+    width: 24px;   
+}
+
+.edit {
+    background-image: url(../../../assets/images/edit.png);
+    background-position: center;
+    height: 24px;
+    width: 24px;
+}
+
+.asignar {
+    background-image: url(../../../assets/images/asignar.png);
+    background-position: center;
+    height: 24px;
+    width: 24px;
 }

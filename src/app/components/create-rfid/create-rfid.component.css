@@ -16,7 +16,6 @@ a {
     margin: -0.512em auto;
     width: 200px;
 }
-
 /*                       FORMULARIO                              */
 #contenedor-formulario-flex {
     justify-content: center;
@@ -26,6 +25,7 @@ a {
     margin: auto;
     position: relative;
 }
+
 
 h3 {
     text-align: center;
@@ -37,17 +37,17 @@ h3 {
     padding: 20px;
 }
 
-form {
-    padding: 37.5px;
-    margin: 50px 0;
-}
-
 #formulario-alumno form {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 90%;
     margin: auto;
+}
+
+form {
+    padding: 37.5px;
+    margin: 50px 0;
 }
 
 input[type="text"], input[type="email"]{
@@ -82,7 +82,7 @@ input::placeholder {
     cursor: pointer;
     font-family: 'Courier New', Courier, monospace;
 }
-
 #formulario-alumno form button:hover {
     background: rgb(65, 65, 65);
 }
+

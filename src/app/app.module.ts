@@ -8,6 +8,11 @@ import { RfidsComponent } from './components/rfids/rfids.component';
 import { AsistenciaComponent } from './components/asistencia/asistencia.component';
 import { HomeComponent } from './components/home/home.component';
 import { CreateAlumnoComponent } from './components/create-alumno/create-alumno.component';
+import { GrupoComponent } from './components/grupo/grupo.component';
+import { AsignarComponent } from './components/asignar/asignar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { CreateRfidComponent } from './components/create-rfid/create-rfid.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,11 +21,16 @@ import { CreateAlumnoComponent } from './components/create-alumno/create-alumno.
     RfidsComponent,
     AsistenciaComponent,
     HomeComponent,
-    CreateAlumnoComponent
+    CreateAlumnoComponent,
+    GrupoComponent,
+    AsignarComponent,
+    NavbarComponent,
+    CreateRfidComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

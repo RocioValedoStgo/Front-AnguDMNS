@@ -1,20 +1,4 @@
-<div>
-    <header>
-        <div class="menu">
-            <div class="contenedor">
-                <p class="logo"> CRUD A/S </p>
-                <nav>
-                    <ul>
-                        <li><a routerLink="/"> Inicio </a></li>
-                        <li><a routerLink="/alumnos"> Ver Alumnos </a></li>
-                        <li><a routerLink="/asistencia"> Ver Asistencia </a></li>
-                        <li><a routerLink="/rfids"> Ver RFIDS </a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-    
+<div class="fondo">
     <main>
         <section id="formulario-asignatura">
             <div class="contenedor" id="contenedor-formulario-flex">
@@ -25,12 +9,12 @@
                             <th>Nombre</th>
                             <th>Apellido Paterno</th>
                             <th>Apellido Materno</th>
-                            <th>Genero</th>
+                            <th>Género</th>
                             <th>Matricula</th>
                             <th>Correo</th>
                             <th>RFID</th>
                             <th>Grupo</th>
-                            <th>Opciones</th>
+                            <th><a routerLink="/createAlumno"> + Crear Alumno</a> </th>
                         </tr>
                         <tr>
                             <td>allll</td>
@@ -41,13 +25,15 @@
                             <td>jfoijfoieriofew</td>
                             <td>voidferkfoierkfer</td>
                             <td>jijregjreijgireiger</td>
-                            <td>nriugerujgierugjiuerjgierpppp</td>
+                            <td>
+                                <button type="button" class="edit"></button>&nbsp;
+                                <button class="delete"></button>&nbsp;
+                                <button class="asignar" routerLink="/asignar-RFID"></button>
+                            </td>
                         </tr>
                     </table>
                 </div>
-
             </div>
         </section>
-    </main>
-
+    </main>|
 </div>

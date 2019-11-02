@@ -1,33 +1,22 @@
 <div class="fondo">
-    <header>
-        <div class="menu">
-            <div class="contenedor">
-                <p class="logo"> CRUD A/S </p>
-                <nav>
-                    <ul>
-                        <li><a routerLink="/"> Inicio </a></li>
-                        <li><a routerLink="/alumnos"> Ver Alumnos </a></li>
-                        <li><a routerLink="/asistencia"> Ver Asistencia </a></li>
-                        <li><a routerLink="/rfids"> Ver RFIDS </a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
     <main>
         <section id="formularios">
             <div class="container">
-                <h1>Registro de Asistencias</h1>
                 <div class="container-forms">
+                    <h1>Bienvenido al</h1>
+                    <h1>Registro de Asistencias</h1>
+                </div>
+                <br>
+                <div class="contenedor-formularios">
                     <div class="formularioColor color1">
-                        <img class="imagen" src="../../../assets/images/alumno.png">
-                        <h4>Alumnos</h4>
-                        <button routerLink="/createAlumno">Crear Alumno</button>
+                        <img class="imagen" src="../../../assets/images/alumno.png"> 
+                        <h4>Alumno</h4>
+                        <button routerLink="/createAlumno">Crear</button>
                     </div>
-                    <div class="formularioColor color2">
-                        <h4></h4>
-
+                    <div class="formularioColor color1">
+                        <img class="imagen" src="../../../assets/images/rfid.png">
+                        <h4>RFID</h4>
+                        <button routerLink="/createRfid">Crear</button>
                     </div>
                 </div>
             </div>
