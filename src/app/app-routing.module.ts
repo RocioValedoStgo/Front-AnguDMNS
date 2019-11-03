@@ -8,6 +8,8 @@ import { CreateAlumnoComponent } from './components/create-alumno/create-alumno.
 import { GrupoComponent } from './components/grupo/grupo.component';
 import { AsignarComponent } from './components/asignar/asignar.component';
 import { CreateRfidComponent } from './components/create-rfid/create-rfid.component';
+import { EditAlumnoComponent } from './components/edit-alumno/edit-alumno.component';
+import { EditRfidComponent } from './components/edit-rfid/edit-rfid.component';
 
 const routes: Routes = [
   {
@@ -42,6 +44,14 @@ const routes: Routes = [
     path: 'createRfid',
     component: CreateRfidComponent
   },
+  {
+    path: 'editAlumno',
+    component: EditAlumnoComponent
+  },
+  {
+    path: 'editRfid',
+    component: EditRfidComponent
+  }
 ];
 
 @NgModule({

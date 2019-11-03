@@ -13,6 +13,8 @@ import { AsignarComponent } from './components/asignar/asignar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CreateRfidComponent } from './components/create-rfid/create-rfid.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EditAlumnoComponent } from './components/edit-alumno/edit-alumno.component';
+import { EditRfidComponent } from './components/edit-rfid/edit-rfid.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
     GrupoComponent,
     AsignarComponent,
     NavbarComponent,
-    CreateRfidComponent
+    CreateRfidComponent,
+    EditAlumnoComponent,
+    EditRfidComponent
   ],
   imports: [
     BrowserModule,

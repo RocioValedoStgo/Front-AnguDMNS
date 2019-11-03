@@ -63,3 +63,33 @@ button {
     flex-wrap: wrap;
     margin: auto;
 }
+
+/*          CARD              */
+
+.card {
+    padding: 4px 2px;
+    border: 1px solid rgb(179, 72, 1);
+}
+  
+.card:hover {
+    background: rgba(153, 153, 153, 0.712);
+}
+
+h5 {
+    margin: 0;
+    font-size: 14pt;
+    color: black;
+}
+
+.card-button {
+    padding: 6px;
+    background: rgb(202, 81, 0);
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-size: 10pt;
+}
+
+.card-button:hover {
+    background: rgb(136, 32, 0);
+}

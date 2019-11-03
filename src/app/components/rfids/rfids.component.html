@@ -7,14 +7,18 @@
                     <table class="tablitaA">
                         <tr>
                             <th>Numero de Serie</th>
-                            <th><a routerLink="/createRfid"> + Crear RFID</a> </th>
+                            <th><a routerLink="/createRfid"><i class="fas fa-plus-square"></i> Crear RFID</a> </th>
                         </tr>
                         <tr>
-                            <td>allll</td>
+                            <td>a1b2c3</td>
                             <td>
-                                <button type="button" class="edit"></button>&nbsp;
-                                <button class="delete"></button>&nbsp;
-                                <button routerLink="/asignar-RFID" class="asignar"></button>
+                                <button type="button" class="edit tooltip" routerLink="/editRfid">
+                                    <span class="tooltiptext">Editar</span>
+                                </button>&nbsp;
+                                <button class="delete tooltip">
+                                    <span class="tooltiptext">Eliminar</span></button>&nbsp;
+                                <button routerLink="/asignar-RFID" class="asignar tooltip">
+                                    <span class="tooltiptext">Asignar</span></button>
                             </td>
                         </tr>
                     </table>
