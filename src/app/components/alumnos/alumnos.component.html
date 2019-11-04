@@ -6,6 +6,7 @@
                 <div class="tabla">
                     <table class="tablitaA">
                         <tr>
+                            <th>ID</th>
                             <th>Nombre</th>
                             <th>Apellido Paterno</th>
                             <th>Apellido Materno</th>
@@ -13,22 +14,21 @@
                             <th>Matricula</th>
                             <th>Correo</th>
                             <th>RFID</th>
-                            <!-- <th>Grupo</th> -->
-                            <th><a routerLink="/createAlumno"><i class="fas fa-plus-square"></i> Crear Alumno</a> </th>
+                            <th><a routerLink="/createCustomer"><i class="fas fa-plus-square"></i> Crear Alumno</a> </th>
                         </tr>
-                        <tr>
-                            <td>Jose Angel</td>
-                            <td>Ruiz</td>
-                            <td>Perez</td>
-                            <td>Masculino</td>
-                            <td>181109</td>
-                            <td>181109@ids.upchiapas.edu.mx</td>
-                            <td>a1b2c3</td>
-                            <!-- <td>jijregjreijgireiger</td> -->
+                        <tr *ngFor="let customer of Customers">
+                            <td>{{customer.id}}</td>
+                            <td>{{customer.name}}</td>
+                            <td>{{customer.ap_pat}}</td>
+                            <td>{{customer.ap_mat}}</td>
+                            <td>{{customer.gender}}</td>
+                            <td>{{customer.matricula}}</td>
+                            <td>{{customer.email}}</td>
+                            <td>{{customer.rfid}}</td>
                             <td>
-                                <button type="button" class="edit tooltip" routerLink="/editAlumno">
+                                <button type="button" class="edit tooltip" routerLink="/editCustomer/{{customer.id}}">
                                     <span class="tooltiptext">Editar</span></button>&nbsp;
-                                <button class="delete tooltip">
+                                <button class="delete tooltip" (click)="deleteCustomer(customer.id)">
                                     <span class="tooltiptext">Eliminar</span></button>&nbsp;
                                 <button class="asignar tooltip" routerLink="/asignar-RFID">
                                     <span class="tooltiptext">Asignar</span></button>

@@ -7,15 +7,17 @@
                     <table class="tablitaA">
                         <tr>
                             <th>Numero de Serie</th>
+                            <th>Estatus</th>
                             <th><a routerLink="/createRfid"><i class="fas fa-plus-square"></i> Crear RFID</a> </th>
                         </tr>
-                        <tr>
-                            <td>a1b2c3</td>
+                        <tr *ngFor="let rfid of Rfids">
+                            <td>{{rfid.serial}}</td>
+                            <td>{{rfid.status}}</td>
                             <td>
-                                <button type="button" class="edit tooltip" routerLink="/editRfid">
+                                <button type="button" class="edit tooltip" routerLink="/editRfid/{{rfid.id}}">
                                     <span class="tooltiptext">Editar</span>
                                 </button>&nbsp;
-                                <button class="delete tooltip">
+                                <button class="delete tooltip" (click)="deleteRfid(rfid.id)">
                                     <span class="tooltiptext">Eliminar</span></button>&nbsp;
                                 <button routerLink="/asignar-RFID" class="asignar tooltip">
                                     <span class="tooltiptext">Asignar</span></button>

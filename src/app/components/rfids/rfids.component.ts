@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Rfid } from '../../interfaces/rfid';
+import { RfidService } from '../../services/rfid/rfid.service';
 
 @Component({
   selector: 'app-rfids',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RfidsComponent implements OnInit {
 
-  constructor() { }
+  Rfids: Rfid[];
+
+  constructor(private rfidService: RfidService) {
+    this.getAllRfids();
+   } 
 
   ngOnInit() {
+  }
+
+  getAllRfids() {
+    this.rfidService.getRfid().subscribe((
+      response: { data: Rfid[] }) => {
+        this.Rfids = response.data;
+      }
+    );
+  }
+
+  deleteRfid(id) {
+    this.rfidService.deleteRfid(id).subscribe((
+      response: { data: Rfid }) => {
+        this.getAllRfids();
+      }
+    );
   }
 
 }

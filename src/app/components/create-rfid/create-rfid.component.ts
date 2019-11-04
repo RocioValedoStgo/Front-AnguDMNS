@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Rfid } from '../../interfaces/rfid';
+import { RfidService } from '../../services/rfid/rfid.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-rfid',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateRfidComponent implements OnInit {
 
-  constructor() { }
+  rfid: Rfid = {
+    serial: null,
+    status: null
+  }
+
+  rfids: Rfid[];
+
+  id: any;
+
+  constructor(private rfidService: RfidService, private router:Router) {}
 
   ngOnInit() {
+  }
+
+  createRfid() {
+    this.rfidService.createRfid(this.rfid).subscribe((
+      response: { data: Rfid} ) => {
+        console.log('Rfid Creado');
+        this.router.navigateByUrl('/rfids');
+      }
+    );
   }
 
 }

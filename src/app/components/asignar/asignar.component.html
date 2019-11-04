@@ -11,41 +11,29 @@
                             <th>Asignar</th>
                         </tr>
                         <tr>
-                            <td>
+                            <td *ngFor="let customer of Customers">
                                 <div class="card">
-                                    <h5>Angel</h5>
-                                    <button class="card-button">Seleccionar</button>
+                                    <h5>{{customer.name}}</h5>
+                                    <button class="card-button" (click)="selectCustomer(customer.id)">Seleccionar</button>
                                 </div>
+                            </td>
+                            <td *ngFor="let rfid of Rfids">
                                 <div class="card">
-                                    <h5>Carlos</h5>
-                                    <button class="card-button">Seleccionar</button>
+                                    <h5>{{rfis.serial}}</h5>
+                                    <button class="card-button" (click)="selectRfid(rfid.id)">Seleccionar</button>
                                 </div>
                             </td>
                             <td>
-                                <div class="card">
-                                    <h5>a1b2c3</h5>
-                                    <button class="card-button">Seleccionar</button>
+                                <div class="card" *ngIf="customerSelect==true">
+                                    <h5>{{customerName}}</h5>
+                                    <button class="card-button" (click)="removeCustomer()">Quitar</button>
                                 </div>
-                                <div class="card">
-                                    <h5>a1b2c3d4</h5>
-                                    <button class="card-button">Seleccionar</button>
-                                </div>
-                                <div class="card">
-                                    <h5>a1b2c3d4e5</h5>
-                                    <button class="card-button">Seleccionar</button>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="card">
-                                    <h5>Angel</h5>
-                                    <button class="card-button">Quitar</button>
-                                </div>
-                                <div class="card">
-                                    <h5>a1b2c3</h5>
-                                    <button class="card-button">Quitar</button>
+                                <div class="card" *ngIf="rfidSelect==true">
+                                    <h5>{{rfidSerial}}</h5>
+                                    <button class="card-button" (click)="removeRfid()">Quitar</button>
                                 </div>
                                 <br>
-                                <button class="card-button">Asignar</button>
+                                <button class="card-button" (click)="asignar()">Asignar</button>
                             </td>
                         </tr>
                     </table>

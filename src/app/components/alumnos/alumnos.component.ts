@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Customer } from '../../interfaces/customer';
+import { CustomerService } from '../../services/customer/customer.service';
 
 @Component({
   selector: 'app-alumnos',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlumnosComponent implements OnInit {
 
-  constructor() { }
+  Customers: Customer[]; 
+
+  constructor(private customerService: CustomerService) { 
+    this.getAllCustomers();
+  }
 
   ngOnInit() {
+  }
+
+  getAllCustomers() {
+    this.customerService.getCustomers().subscribe((
+      response: { data: Customer[] }) => {
+        this.Customers = response.data;
+      }
+    );
+  }
+
+  deleteCustomer(id) {
+    this.customerService.deleteCustomer(id).subscribe((
+      response: { data: Customer }) => {
+        this.getAllCustomers();
+      }
+    );
   }
 
 }

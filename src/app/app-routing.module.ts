@@ -17,7 +17,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'alumnos',
+    path: 'customers',
     component: AlumnosComponent
   },
   {
@@ -29,7 +29,7 @@ const routes: Routes = [
     component: RfidsComponent
   },
   {
-    path: 'createAlumno',
+    path: 'createCustomer',
     component: CreateAlumnoComponent
   },
   {
@@ -45,11 +45,11 @@ const routes: Routes = [
     component: CreateRfidComponent
   },
   {
-    path: 'editAlumno',
+    path: 'editCustomer/:id',
     component: EditAlumnoComponent
   },
   {
-    path: 'editRfid',
+    path: 'editRfid/:id',
     component: EditRfidComponent
   }
 ];

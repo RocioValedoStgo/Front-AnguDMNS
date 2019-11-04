@@ -4,15 +4,15 @@
             <div class="container" id="contenedor-formulario-flex">
                 <h3>&bull; Registro Alumno &bull;</h3>
                 <div class="underline"></div>
-                <form>
-                    <input type="text" placeholder="Nombre" name="">
-                    <input type="text" placeholder="Apellido Paterno" name="">
-                    <input type="text" placeholder="Apellido Materno" name="">
-                    <input type="text" placeholder="Matricula" name="">
-                    <input type="email" placeholder="Correo" name="">
-                    <input type="text" placeholder="Genero" name="">
-                    <button>Guardar</button> &nbsp;
-                    <button routerLink="/alumnos">Cancelar</button>
+                <form (ngSubmit)="createCustomer()" role="form" enctype="multipart/form-data">
+                    <input type="text" placeholder="Nombre" name="name"> 
+                    <input type="text" placeholder="Apellido Paterno" name="ap_pat"> 
+                    <input type="text" placeholder="Apellido Materno" name="ap_mat">
+                    <input type="text" placeholder="Matricula" name="matricula">
+                    <input type="email" placeholder="Correo" name="email"> 
+                    <input type="text" placeholder="Genero" name="gender"> 
+                    <button type="submit">Guardar</button> &nbsp;
+                    <button routerLink="/customers">Cancelar</button>
                 </form>
             </div>
         </section>
