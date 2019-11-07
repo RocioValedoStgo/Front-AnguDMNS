@@ -24,14 +24,14 @@
                             <td>{{customer.gender}}</td>
                             <td>{{customer.matricula}}</td>
                             <td>{{customer.email}}</td>
-                            <td>{{customer.rfid}}</td>
+                            <td>{{customer.serial}}</td>
                             <td>
                                 <button type="button" class="edit tooltip" routerLink="/editCustomer/{{customer.id}}">
                                     <span class="tooltiptext">Editar</span></button>&nbsp;
                                 <button class="delete tooltip" (click)="deleteCustomer(customer.id)">
                                     <span class="tooltiptext">Eliminar</span></button>&nbsp;
-                                <button class="asignar tooltip" routerLink="/asignar-RFID">
-                                    <span class="tooltiptext">Asignar</span></button>
+                                <!-- <button class="asignar tooltip" routerLink="/asignar-RFID">
+                                    <span class="tooltiptext">Asignar</span></button> -->
                             </td>
                         </tr>
                     </table>

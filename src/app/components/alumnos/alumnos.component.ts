@@ -20,15 +20,16 @@ export class AlumnosComponent implements OnInit {
 
   getAllCustomers() {
     this.customerService.getCustomers().subscribe((
-      response: { data: Customer[] }) => {
-        this.Customers = response.data;
+      response: Customer[] ) => {
+        this.Customers = response;
+        console.log(response);
       }
     );
   }
 
   deleteCustomer(id) {
     this.customerService.deleteCustomer(id).subscribe((
-      response: { data: Customer }) => {
+      response: Customer ) => {
         this.getAllCustomers();
       }
     );

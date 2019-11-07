@@ -1,1 +1,1 @@
-export const API = 'http://direccionDeNuestraApiPapus';
+export const API = 'http://djangobb.ddns.net/';

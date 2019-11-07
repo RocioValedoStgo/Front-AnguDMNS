@@ -12,7 +12,7 @@ export class CreateRfidComponent implements OnInit {
 
   rfid: Rfid = {
     serial: null,
-    status: null
+    status: false
   }
 
   rfids: Rfid[];

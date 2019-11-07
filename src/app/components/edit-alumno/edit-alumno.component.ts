@@ -17,7 +17,7 @@ export class EditAlumnoComponent implements OnInit {
     matricula: null,
     email: null,
     gender: null,
-    rfid: null
+    serial: null
   };
 
   customers: Customer[];
@@ -34,8 +34,8 @@ export class EditAlumnoComponent implements OnInit {
     if(this.id) {
       this.edit = true;
       this.customerService.getCustomers().subscribe((
-        response: { data: Customer[] }) => {
-          this.customers = response.data;
+        response: Customer[] ) => {
+          this.customers = response;
           this.customer = this.customers.find((m) => {
             return m.id == this.id
           });
@@ -49,8 +49,9 @@ export class EditAlumnoComponent implements OnInit {
 
   updateCustomer() {
     if (this.edit) {
+      delete this.customer.rfid;
       this.customerService.updateCustomer(this.customer).subscribe((
-        response: { data: Customer }) => {
+        response: Customer ) => {
          console.log('Alumno Actualizado');
          this.router.navigateByUrl('/customers');
         }

@@ -18,7 +18,8 @@ export class AsignarComponent implements OnInit {
     matricula: null,
     email: null,
     gender: null,
-    rfid: null
+    serial: null,
+    rfid: false
   };
 
   rfid: Rfid = {
@@ -43,37 +44,25 @@ export class AsignarComponent implements OnInit {
   ngOnInit() {}
 
   getAllCustomers() {
-    let indice = 0;
-    this.customerService.getCustomers().subscribe((
-      response: { data: Customer[] }) => {
-        for(let i=0; i<response.data.length; i++) {
-          if(response[i].rfid == false) {
-            this.Customers[indice] = response.data[i];
-            indice++;
-          }
-        }
+    this.customerService.getUnassigned().subscribe((
+      response: Customer[] ) => {
+        this.Customers = response;       
       }
     );
   }
 
   getAllRfids() {
-    let indice = 0;
-    this.rfidService.getRfid().subscribe((
-      response: { data: Rfid[] }) => {
-        for(let i=0; i<response.data.length; i++) {
-          if(response[i].status == false) {
-            this.Rfids[indice] = response.data[i];
-            indice++;
-          }
-        }
+    this.rfidService.getUnassigned().subscribe((
+      response: Rfid[] ) => {
+        this.Rfids = response;
       }
     );
   }
 
   selectCustomer(id) {
     this.customerService.getCustomerById(id).subscribe((
-      response: { data: Rfid[] }) => {
-        this.customerName = response[0].data.name;
+      response: Customer[] ) => {
+        this.customerName = response[0].name;
         this.customerSelect = true;
       }
     )

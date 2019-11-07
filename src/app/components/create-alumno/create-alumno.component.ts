@@ -17,7 +17,8 @@ export class CreateAlumnoComponent implements OnInit {
     matricula: null,
     email: null,
     gender: null,
-    rfid: null
+    serial: null,
+    rfid: false
   };
 
   customers: Customer[];

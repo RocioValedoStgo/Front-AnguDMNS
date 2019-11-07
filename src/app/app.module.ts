@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,9 @@ import { CreateRfidComponent } from './components/create-rfid/create-rfid.compon
 import { HttpClientModule } from '@angular/common/http';
 import { EditAlumnoComponent } from './components/edit-alumno/edit-alumno.component';
 import { EditRfidComponent } from './components/edit-rfid/edit-rfid.component';
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+
+const config : SocketIoConfig = {url: 'http://localhost:8080', options: {}};
 
 @NgModule({
   declarations: [
@@ -34,7 +38,9 @@ import { EditRfidComponent } from './components/edit-rfid/edit-rfid.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SocketIoModule.forRoot(config),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

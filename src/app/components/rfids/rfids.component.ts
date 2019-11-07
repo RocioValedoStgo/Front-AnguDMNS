@@ -20,8 +20,8 @@ export class RfidsComponent implements OnInit {
 
   getAllRfids() {
     this.rfidService.getRfid().subscribe((
-      response: { data: Rfid[] }) => {
-        this.Rfids = response.data;
+      response: Rfid[] ) => {
+        this.Rfids = response;
       }
     );
   }

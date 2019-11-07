@@ -11,15 +11,15 @@
                             <th>Asignar</th>
                         </tr>
                         <tr>
-                            <td *ngFor="let customer of Customers">
-                                <div class="card">
+                            <td>
+                                <div class="card" *ngFor="let customer of Customers">
                                     <h5>{{customer.name}}</h5>
                                     <button class="card-button" (click)="selectCustomer(customer.id)">Seleccionar</button>
                                 </div>
                             </td>
-                            <td *ngFor="let rfid of Rfids">
-                                <div class="card">
-                                    <h5>{{rfis.serial}}</h5>
+                            <td>
+                                <div class="card" *ngFor="let rfid of Rfids">
+                                    <h5>{{rfid.serial}}</h5>
                                     <button class="card-button" (click)="selectRfid(rfid.id)">Seleccionar</button>
                                 </div>
                             </td>

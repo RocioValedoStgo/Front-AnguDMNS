@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ApiService } from './api.service';
+// import { ApiService } from './api.service';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +8,11 @@ import { ApiService } from './api.service';
 })
 export class AppComponent {
   title = 'Asistencia';
-  constructor(private apiService: ApiService){}
+  constructor(){}
 
   ngOnInit(){
-    this.apiService.getCustomers().subscribe((res)=>{
-      
-      });
-    }
+  }
+    
 
     
   }

@@ -5,12 +5,12 @@
                 <h3>&bull; Editar Alumno &bull;</h3>
                 <div class="underline"></div>
                 <form (ngSubmit)="updateCustomer()" role="form" enctype="multipart/form-data">
-                    <input type="text" placeholder="Nombre" name="name">
-                    <input type="text" placeholder="Apellido Paterno" name="ap_pat">
-                    <input type="text" placeholder="Apellido Materno" name="ap_mat">
-                    <input type="text" placeholder="Matricula" name="matricula">
-                    <input type="email" placeholder="Correo" name="email">
-                    <input type="text" placeholder="Genero" name="gender">
+                    <input type="text" placeholder="Nombre" name="name" [(ngModel)]="customer.name">
+                    <input type="text" placeholder="Apellido Paterno" name="ap_pat" [(ngModel)]="customer.ap_pat">
+                    <input type="text" placeholder="Apellido Materno" name="ap_mat" [(ngModel)]="customer.ap_mat">
+                    <input type="text" placeholder="Matricula" name="matricula" [(ngModel)]="customer.matricula">
+                    <input type="email" placeholder="Correo" name="email" [(ngModel)]="customer.email">
+                    <input type="text" placeholder="Genero" name="gender" [(ngModel)]="customer.gender">
                     <button type="submit">Guardar</button> &nbsp;
                     <button routerLink="/customers">Cancelar</button>
                 </form>

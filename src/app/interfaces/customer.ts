@@ -1,10 +1,11 @@
 export interface Customer {
-    id?: string;
+    id?: number;
     name: string;
     ap_pat: string;
     ap_mat: string;
     matricula: number;
     email: string;
     gender: string;
-    rfid: string;
+    serial: string;
+    rfid: boolean;
 }
