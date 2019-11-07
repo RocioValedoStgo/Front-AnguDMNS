@@ -30,8 +30,8 @@ export class EditRfidComponent implements OnInit {
     if(this.id) {
       this.edit = true;
       this.rfidService.getRfid().subscribe((
-        response: { data: Rfid[] }) => {
-          this.rfids = response.data;
+        response: Rfid[] ) => {
+          this.rfids = response;
           this.rfid = this.rfids.find((m) => {
             return m.id == this.id
           });
@@ -46,7 +46,7 @@ export class EditRfidComponent implements OnInit {
   updateRfid() {
     if (this.edit) {
       this.rfidService.updateRfid(this.rfid).subscribe((
-        response: { data: Rfid }) => {
+        response: Rfid ) => {
          console.log('Rfid Actualizado');
          this.router.navigateByUrl('/rfids');
         }

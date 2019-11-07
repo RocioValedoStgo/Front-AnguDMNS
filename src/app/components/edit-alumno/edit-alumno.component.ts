@@ -25,8 +25,8 @@ export class EditAlumnoComponent implements OnInit {
   id: any;
   edit: boolean = false;
 
-  constructor(private customerService: CustomerService, 
-    private router: Router, 
+  constructor(private customerService: CustomerService,
+    private router: Router,
     private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {

@@ -7,5 +7,4 @@ export interface Customer {
     email: string;
     gender: string;
     serial: string;
-    rfid: boolean;
 }

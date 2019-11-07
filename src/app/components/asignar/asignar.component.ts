@@ -3,6 +3,7 @@ import { Customer } from '../../interfaces/customer';
 import { CustomerService } from '../../services/customer/customer.service';
 import { Rfid } from '../../interfaces/rfid';
 import { RfidService } from '../../services/rfid/rfid.service';
+import { Router, ActivatedRoute  } from '@angular/router';
 
 @Component({
   selector: 'app-asignar',
@@ -18,16 +19,15 @@ export class AsignarComponent implements OnInit {
     matricula: null,
     email: null,
     gender: null,
-    serial: null,
-    rfid: false
+    serial: null
   };
 
   rfid: Rfid = {
     serial: null,
     status: null
   };
-  
-  Customers: Customer[]; 
+
+  Customers: Customer[];
   Rfids: Rfid[];
 
   customerSelect = false;
@@ -36,7 +36,11 @@ export class AsignarComponent implements OnInit {
   customerName: string;
   rfidSerial: string;
 
-  constructor(private customerService: CustomerService, private rfidService: RfidService) {
+  asigSerial: number;
+
+  constructor(private customerService: CustomerService, private rfidService: RfidService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute) {
     this.getAllCustomers();
     this.getAllRfids();
   }
@@ -46,7 +50,7 @@ export class AsignarComponent implements OnInit {
   getAllCustomers() {
     this.customerService.getUnassigned().subscribe((
       response: Customer[] ) => {
-        this.Customers = response;       
+        this.Customers = response;
       }
     );
   }
@@ -60,16 +64,24 @@ export class AsignarComponent implements OnInit {
   }
 
   selectCustomer(id) {
+    console.log(id);
     this.customerService.getCustomerById(id).subscribe((
       response: Customer[] ) => {
-        this.customerName = response[0].name;
+        this.customerName = id;
         this.customerSelect = true;
       }
-    )
+    );
+    
   }
 
-  selectRfid() {
-    
+  selectRfid(serial) {
+    this.rfidService.getRfidById(serial).subscribe((
+      response: Rfid[] )=> {
+        this.rfidSerial = serial;
+        this.rfidSelect = true;
+      }
+    );
+
   }
 
   removeCustomer() {
@@ -82,8 +94,16 @@ export class AsignarComponent implements OnInit {
     console.log('Rfid Removido');
   }
 
-  asignar() {
-   
+  asignar(customer,idRfid) {
+    console.log(customer);
+    // customer.serial = idRfid;
+    // this.customerService.updateCustomer(customer).subscribe((
+    //   response: Customer ) => {
+    //     this.customer.serial = idRfid;
+    //         console.log('Alumno Actualizado ' + this.customer.serial);
+    //     // this.router.navigateByUrl('/customers');
+    //   }
+    // );
   }
 
 }
