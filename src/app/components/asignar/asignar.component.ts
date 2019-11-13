@@ -27,6 +27,7 @@ export class AsignarComponent implements OnInit {
     status: null
   };
 
+  customers: Customer[];
   Customers: Customer[];
   Rfids: Rfid[];
 
@@ -69,6 +70,7 @@ export class AsignarComponent implements OnInit {
       response: Customer[] ) => {
         this.customerName = id;
         this.customerSelect = true;
+
       }
     );
     
@@ -81,7 +83,6 @@ export class AsignarComponent implements OnInit {
         this.rfidSelect = true;
       }
     );
-
   }
 
   removeCustomer() {
@@ -94,8 +95,9 @@ export class AsignarComponent implements OnInit {
     console.log('Rfid Removido');
   }
 
-  asignar(customer,idRfid) {
-    console.log(customer);
+  asignar(customerName,rfidSerial) {
+    console.log(customerName);
+    console.log(rfidSerial);
     // customer.serial = idRfid;
     // this.customerService.updateCustomer(customer).subscribe((
     //   response: Customer ) => {
